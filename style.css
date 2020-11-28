@@ -1,0 +1,171 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: poppins;
+}
+
+#main {
+    background: #000399;
+    width: 100%;
+    height: 100vh;
+}
+
+#about {
+    width: 100%;
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* navigation bar ----------- */
+nav {
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo {
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+ul{
+    list-style: none;
+}
+
+ul li {
+    display: inline-block;
+    padding: 15px;
+}
+
+ul li a {
+    color: #7476ec;
+    text-transform: uppercase;
+    font-weight: 400;
+    transition: all 0.5s;
+}
+
+ul li a:hover {
+    margin-bottom: 1px solid #080BD4;
+    color: #fff;
+}
+
+/* hero section ------------------ */
+.content {
+    align-items: center;
+}
+
+.content .txtBox {
+    padding: 80px;
+    color: #CCCDEB;
+}
+
+.content .txtBox h1 {
+    padding: 30px;
+    font-size: 50px;
+    line-height: 65px;
+    padding-top: 5px;
+}
+
+.content .txtBox p {
+    font-size: 25px;
+    margin-left: 30px;
+}
+
+.btn {
+    margin-top: 15px;
+    background: #1ACC8D;
+    border: none;
+    padding: 12px 22px 12px 22px ;
+    border-radius: 20px;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 30px;
+}
+
+@media (max-width:991px){
+    .menu {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        z-index: 11;
+        border: none;
+        background: hsl(29, 53%, 9%);
+        transition: all 0.5s;
+        padding-top: 50px;
+        text-align: center;
+    }
+    .menu.active {
+        left: 0;
+    }
+    nav .logo {
+        margin-top: 25px;
+        float: left ;
+        flex: 1;
+        padding-left: 30px;
+    }
+    ul {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        flex: 1;
+        margin-top: 80px;
+    }
+    ul li a {
+        font-size: 20px;
+    }
+    .menuicon {
+        position: fixed;
+        top: 40px;
+        right: 30px;
+        width: 30px;
+        height: 30px;
+        background: url(images/menu.png);
+        background-size: 25px;
+        cursor: pointer;
+        background-repeat: no-repeat;
+    }
+    .menuicon.active{
+        background: url(images/close.png);
+        background-size: 20px;
+        cursor: pointer;
+        background-repeat: no-repeat;
+        z-index: 1000;
+    }
+}
+
+@media (max-width:520px) {
+    .content .txtBox h1 {
+        margin-top: 50px;
+        font-size: 30px;
+        line-height: 35px;
+    }  
+    .content .txtBox p {
+        font-size: 15px;
+        margin-left: 30px;
+    }  
+}
+
+@media (max-width:650px) {
+    .content .txtBox h1 {
+        margin-top: 50px;
+        font-size: 30px;
+        line-height: 35px;
+    }  
+    .content .txtBox p {
+        font-size: 15px;
+        margin-left: 30px;
+    }  
+}
