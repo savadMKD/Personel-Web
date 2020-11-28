@@ -180,6 +180,7 @@ ul li a:hover {
 
 .about h2 {
     text-align: center;
+    color: #010483;
 }
 
 .about p {
@@ -216,7 +217,7 @@ ul li a:hover {
     background-color: #0fbcf9;
     border-radius: 8px;
     width: 0;
-    transition: 1s linear;
+    transition: 3s linear;
     position: relative;
 }
 
@@ -247,6 +248,90 @@ ul li a:hover {
 
 @media (max-width:991px) {
     #about {
+        flex-direction: column;
+    }
+}
+
+
+/* Technolegies i use ------------------ */
+#tech{
+    width: 100%;
+    position: relative;
+}
+
+#tech h1 {
+    text-align: center;
+    color: #010483;
+    line-height: 30px;
+    margin-top: 40px;
+    font-size: 30px;
+}
+
+.content_BOX {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+    align-items: center;
+}
+
+.img img {
+    border-radius: 50%;
+    border: 2px solid #1ACC8D;
+    margin: 40px;
+}
+
+.techBox {
+    padding: 20px;
+}
+
+.each_box {
+    display: flex;
+    margin-top: 20px;
+}
+
+.each_box .icon_box i{
+    align-items: flex-start;
+    margin: 10px;
+    padding: 10px;
+    font-size: 25px;
+    border: 1px solid;
+    border-radius: 20px;
+    color: #1ACC8D;
+    transition: all 0.5s linear;
+    cursor: pointer;
+}
+
+.each_box .icon_box i:hover {
+    background-color: #1ACC8D;
+    color: #fff;
+}
+
+.each_box .info {
+    margin: 5px;
+}
+
+.each_box .info h3 {
+    color: #343A40;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.each_box .info h3:hover {
+    color: #1ACC8D;
+}
+
+.each_box .info p span {
+    color: #686868;
+    font-weight: 600;
+}
+
+.each_box .info p {
+    color: #868686;
+}
+
+
+@media (max-width:991px) {
+    .content_BOX {
         flex-direction: column;
     }
 }
