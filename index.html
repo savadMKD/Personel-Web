@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Savad | Web designer</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js" integrity="sha512-sJa5KWq3F99QOeijUOm9O+BgDgVtzrWBBagZtjlW7F3I47NO1OaNJvbut+9KOPmjNr4Wb3blU4vQiQdi+Zk6wg==" crossorigin="anonymous"></script>
 
     <!-- ---------- Costom stylesheets ----------- -->
     <link rel="stylesheet" href="style.css" />
@@ -22,7 +23,7 @@
              </a>
              <!-- menu lists -------- -->
              <ul class="menu" id="menu">
-                 <li><a href="#">Home</a></li>
+                 <li><a href="#main">Home</a></li>
                  <li><a href="#">Skills</a></li>
                  <li><a href="#">Services</a></li>
                  <li><a href="#">Projects</a></li>
@@ -47,12 +48,60 @@
              </div>
          </div>
      </section>
-
-     <!-- ------------------ About Section --------------- -->
+     
      <section id="about">
+         <div class="about">
+             <h2>About Us</h2>
+             <p>
+                 Hai, Iam Muhammed Savad. a Front-End Web Develouper From Kerala. Iam Studying on 8th Standard. Iam Working as a Freelancer as a Front-End Web Develouper..
+                 my passion that drives me takes me through software and coding works and I'm Strong in that.
+                  <br>
+                 Iam Starting Freelancing in nowadays, i have any Projects to showcase... But I Did more Projects When I learning Web designing  <br> 
+                 <br>
+                 If you have any questions or comments, please don't hesitate to <a href="#contact">contact us.</a>
+             </p>
+         </div>
+         <!-- ------------------ Skills Section -------------------- -->
+        <div class="skills">
+            <div class="skill">
+                <div class="skill-name">HTML</div>
+                <div class="skill-bar">
+                    <div class="skill-per" per="90"></div>
+                </div>
+            </div>
 
+            <div class="skill">
+                <div class="skill-name">CSS</div>
+                <div class="skill-bar">
+                    <div class="skill-per" per="70"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-name">Javascript</div>
+                <div class="skill-bar">
+                    <div class="skill-per" per="60"></div>
+                </div>
+            </div>
+        </div>
      </section>
 
      <script src="script.js"></script>
+     <script>
+         $('.skill-per').each(function () {
+            var $this = $(this);
+            var per = $this.attr('per');
+            $this.css("width",per+'%');
+            $({animatedValue: 0}).animate({animatedValue: per},{
+                duration: 1000,
+                step: function() {
+                    $this.attr('per', Math.floor(this.animatedValue) + '%')
+                },
+                complete: function() {
+                    $this.attr('per', Math.floor(this.animatedValue) + '%')
+                }
+            });
+        });
+     </script>
   </body>
 </html>
